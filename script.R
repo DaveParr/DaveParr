@@ -29,4 +29,6 @@ repos %>%
                 y = "Stargazers") +
   theme_minimal() +
   facet_wrap(~ metric)
+
+ggsave("graph.png")
   
