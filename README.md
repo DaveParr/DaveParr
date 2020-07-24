@@ -1,6 +1,4 @@
-### Hi there 👋
-
-- 🔭 I’m currently working on what to do with this project
+![](graph.png)
 
 <!--
 **DaveParr/DaveParr** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
