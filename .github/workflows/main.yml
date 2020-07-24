@@ -20,7 +20,7 @@ jobs:
           Rscript -e "install.packages('tidyr')"
           Rscript -e "install.packages('dplyr')"
           Rscript -e "install.packages('ggplot2')"
-- name: Run script
+      - name: Run script
         run: |-
           Rscript -e "source('script.R')"
           
