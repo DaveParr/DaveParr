@@ -26,6 +26,8 @@ jobs:
         run: |-
           Rscript -e "source('script.R')"
       - name: Commit results
+        with:
+            repo-token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git commit -m "Update the graph" -a || echo "No changes to commit"
           git push https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git HEAD:${{ github.ref }} || echo "No changes to commit"
