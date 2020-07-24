@@ -1,0 +1,23 @@
+name: Show last tweet
+
+on:
+  push:
+    branches: [ master ]
+  schedule:
+    - cron:  '40 * * * *'
+      
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: r-lib/actions/setup-r@v1
+      - name: Install Package Dependencies
+        run: |-
+          Rscript -e "install.packages('remotes')"
+          Rscript -e "install.packages('gh')"
+          Rscript -e "install.packages('tibble')"
+          Rscript -e "install.packages('tidyr')"
+          Rscript -e "install.packages('dplyr')"
+          Rscript -e "install.packages('ggplot2')"
+          
