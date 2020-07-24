@@ -1,6 +1,6 @@
 <div align="middle">
  
-<img src="https://github.com/daveparr/daveparr/blob/master/graph.png" width="600">
+<img src="https://github.com/daveparr/daveparr/blob/master/graph.png" width="600" height="400">
 
 <!--
 **DaveParr/DaveParr** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
