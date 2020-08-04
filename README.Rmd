@@ -2,7 +2,7 @@
 output: github_document
 ---
 
-![](https://github.com/daveparr/daveparr/blob/master/graph.png)
+![A plot of David Parrs popular github repos](https://github.com/daveparr/daveparr/blob/master/graph.png)
 
 ```{r echo=FALSE, message=FALSE}
 library(dev.to.ol)
