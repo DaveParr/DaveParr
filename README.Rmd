@@ -1,0 +1,23 @@
+---
+output: github_document
+---
+
+<div align="middle">
+ 
+<img src="https://github.com/daveparr/daveparr/blob/master/graph.png" width="600">
+
+```{r echo=FALSE, message=FALSE}
+library(dev.to.ol)
+library(tidyverse)
+library(knitr)
+
+dev.to.ol::get_users_articles() %>%
+  dplyr::arrange(dplyr::desc(public_reactions_count)) %>%
+  dplyr::slice(1:5) %>%
+  dplyr::select(title,
+         url,
+         public_reactions_count,
+         comments_count,
+         page_views_count) %>% 
+  knitr::kable()
+```
