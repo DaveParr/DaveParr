@@ -2,7 +2,11 @@
 output: github_document
 ---
 
+## Popular Repos
+
 ![A plot of David Parrs popular github repos](https://github.com/daveparr/daveparr/blob/master/graph.png)
+
+## Popular Blogs
 
 ```{r echo=FALSE, message=FALSE}
 library(dev.to.ol)

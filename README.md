@@ -1,5 +1,10 @@
 
-![](https://github.com/daveparr/daveparr/blob/master/graph.png)
+## Popular Repos
+
+![A plot of David Parrs popular github
+repos](https://github.com/daveparr/daveparr/blob/master/graph.png)
+
+## Popular Blogs
 
 | article                                                                                                                                                     | public\_reactions\_count | comments\_count | page\_views\_count |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------------------: | --------------: | -----------------: |
