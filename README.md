@@ -1,9 +1,5 @@
 
-<div data-align="middle">
-
-<img src="https://github.com/daveparr/daveparr/blob/master/graph.png" width="600">
-
-</div>
+![](https://github.com/daveparr/daveparr/blob/master/graph.png)
 
 | article                                                                                                                                                     | public\_reactions\_count | comments\_count | page\_views\_count |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------------------: | --------------: | -----------------: |
