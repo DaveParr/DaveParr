@@ -6,6 +6,8 @@ output: github_document
  
 <img src="https://github.com/daveparr/daveparr/blob/master/graph.png" width="600">
 
+</div>
+
 ```{r echo=FALSE, message=FALSE}
 library(dev.to.ol)
 library(tidyverse)
