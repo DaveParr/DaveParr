@@ -17,18 +17,19 @@ tibble::tibble(repos = gh::gh("GET /users/:username/repos", username = "daveparr
 
 repos %>%
   dplyr::filter(fork == FALSE) %>%
-  pivot_longer(cols = ends_with("_count"),
+  dplyr::filter(forks_count > 0 | stargazers_count > 0 | watchers_count > 0) %>% 
+  tidyr::pivot_longer(cols = ends_with("_count"),
                names_to = "metric", values_to = "count") %>% 
   ggplot2::ggplot(aes(
-    x = reorder(name, -count), 
-    y = count)) +
-  ggplot2::geom_col() + 
-  ggplot2::guides(x = guide_axis(angle = 45)) +
-  ggplot2::labs(title = "Stargazers by repo",
+    x = name, 
+    y = count,
+    fill = metric)) +
+  ggplot2::geom_col(position = "dodge") + 
+  ggplot2::guides(x = guide_axis(angle = 90)) +
+  ggplot2::labs(title = "My popular repos",
                 x = "Repo",
                 y = "Stargazers") +
-  theme_minimal() +
-  facet_wrap(~ metric)
+  ggplot2::theme_minimal()
 
-ggsave("graph.png")
+ggplot2::ggsave("graph.png")
   
