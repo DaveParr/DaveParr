@@ -24,7 +24,7 @@ jobs:
           Rscript -e "install.packages('ggplot2')"
       - name: Run script
         run: |-
-          Rscript -e "source('script.R')"
+          Rscript -e "source('repos.R')"
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
