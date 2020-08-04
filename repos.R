@@ -19,7 +19,7 @@ repos %>%
   dplyr::filter(forks_count > 0 | stargazers_count > 0 | watchers_count > 0) %>% 
   tidyr::pivot_longer(cols = ends_with("_count"),
                names_to = "metric", values_to = "count") %>% 
-  dplyr::mutate(metric = str_remove(metric, "_count")) %>% 
+  dplyr::mutate(metric = stringr::str_remove(metric, "_count")) %>% 
   ggplot2::ggplot(aes(
     x = name, 
     y = count,
