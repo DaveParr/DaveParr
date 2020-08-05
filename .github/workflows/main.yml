@@ -15,27 +15,35 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - uses: r-lib/actions/setup-r@v1
-      - name: Install Package Dependencies
+      - uses: r-lib/actions/setup-pandoc@v1
+      - name: Install Dependencies
         run: |-
           Rscript -e "install.packages('remotes')"
-          Rscript -e "remotes::install_github('DaveParr/dev.to.ol')"
           Rscript -e "install.packages('gh')"
           Rscript -e "install.packages('tibble')"
           Rscript -e "install.packages('tidyr')"
           Rscript -e "install.packages('dplyr')"
           Rscript -e "install.packages('ggplot2')"
           Rscript -e "install.packages('stringr')"
+          Rscript -e "remotes::install_github('DaveParr/dev.to.ol')"
       - name: Run repos
         run: |-
           Rscript -e "source('repos.R')"
-      - name: Run blogs
-        run: |-
-          Rscript -e "source('blogs.R')"
-      - name: Commit results
+      - name: Commit updated graph
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           git add graph.png
           git commit -m "Update the graph" -a || echo "No changes to commit"
           git push https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git HEAD:${{ github.ref }} || echo "No changes to commit"
+      - name: Install rmarkdown
+        run: Rscript -e 'install.packages("rmarkdown")'
+      - name: Render README
+        run: Rscript -e 'rmarkdown::render("README.Rmd")'
+      - name: Commit updated README
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git commit README.md -m 'Re-build README.Rmd' || echo "No changes to commit"
+          git push origin || echo "No changes to commit"
           
