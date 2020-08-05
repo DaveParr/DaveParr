@@ -26,6 +26,7 @@ jobs:
           Rscript -e "install.packages('dplyr')"
           Rscript -e "install.packages('ggplot2')"
           Rscript -e "install.packages('stringr')"
+          Rscript -e "install.packages('gt')"
           Rscript -e "remotes::install_github('DaveParr/dev.to.ol')"
       - name: Run repos
         run: |-
