@@ -2,7 +2,7 @@ name: Generate new graph
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   schedule:
     - cron:  '40 * * * *'
       
