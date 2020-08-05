@@ -10,7 +10,7 @@ output: github_document
 
 ```{r echo=FALSE, message=FALSE}
 library(dev.to.ol)
-library(tidyverse)
+library(dplyr)
 library(knitr)
 
 dev.to.ol::get_users_articles() %>%
