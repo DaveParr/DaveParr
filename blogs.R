@@ -1,6 +1,5 @@
 library(dev.to.ol)
-library(tidyverse)
-library(knitr)
+library(dplyr)
 
 dev.to.ol::get_users_articles() %>%
   dplyr::arrange(dplyr::desc(public_reactions_count)) %>%
