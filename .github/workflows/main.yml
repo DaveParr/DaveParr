@@ -18,7 +18,7 @@ jobs:
       - name: Install Package Dependencies
         run: |-
           Rscript -e "install.packages('remotes')"
-          Rscript -e "remotes::install_github('DaveParr/dev.to.ol)"
+          Rscript -e "remotes::install_github('DaveParr/dev.to.ol')"
           Rscript -e "install.packages('gh')"
           Rscript -e "install.packages('tibble')"
           Rscript -e "install.packages('tidyr')"
