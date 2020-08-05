@@ -10,6 +10,7 @@ jobs:
   build:
     runs-on: macOS-latest
     env:
+      DEVTO: ${{ secrets.DEVTO }}
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v1
@@ -23,9 +24,12 @@ jobs:
           Rscript -e "install.packages('dplyr')"
           Rscript -e "install.packages('ggplot2')"
           Rscript -e "install.packages('stringr')"
-      - name: Run script
+      - name: Run repos
         run: |-
           Rscript -e "source('repos.R')"
+      - name: Run blogs
+        run: |-
+          Rscript -e "source('blogs.R')"
       - name: Commit results
         run: |
           git config --local user.email "actions@github.com"
