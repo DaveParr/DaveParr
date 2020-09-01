@@ -4,11 +4,11 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron:  '0 * * * *'
+    - cron:  '0 1 * * *'
       
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: macos-latest
     env:
       DEVTO: ${{ secrets.DEVTO }}
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
