@@ -23,6 +23,7 @@ dev.to.ol::get_users_articles() %>%
                 page_views_count) %>%
   knitr::kable()
 ```
+
 ## Holopin Board
 
 [![@daveparr's Holopin board](https://holopin.me/daveparr)](https://holopin.io/@daveparr)
