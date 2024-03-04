@@ -8,28 +8,6 @@ output: github_document
 
 ![A plot of David Parrs popular github repos](https://github.com/daveparr/daveparr/blob/main/graph.png)
 
-## Popular Blogs
-
-```{r echo=FALSE, message=FALSE}
-library(dev.to.ol)
-library(dplyr)
-library(knitr)
-
-dev.to.ol::get_users_articles() %>%
-  dplyr::arrange(dplyr::desc(public_reactions_count)) %>%
-  dplyr::slice(1:5) %>%
-  dplyr::mutate(article = paste0('[', title, '](', url, ')')) %>%
-  dplyr::select(article,
-                public_reactions_count,
-                comments_count,
-                page_views_count) %>%
-  knitr::kable()
-```
-
-## Holopin Board
-
-[![@daveparr's Holopin board](https://holopin.me/daveparr)](https://holopin.io/@daveparr)
-
 ## About
 
 This profile is generated from new data each hour. GitHub Actions drive it, by triggering a job which calls the API, and produces a graph of every repo I am the source for which has a fork, star or watch. Another job uses my package, [`dev.to.ol`](https://github.com/DaveParr/dev.to.ol) to query my posts, and selects the top 5 by reaction to show in a table with links. If you want to understand more about how this works, have a look at the [source code](https://github.com/DaveParr/DaveParr).
