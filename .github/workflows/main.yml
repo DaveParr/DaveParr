@@ -2,7 +2,7 @@ name: Generate new graph
 
 on:
   push:
-    branches: [ main ]
+    branches: [ simplify ]
   schedule:
     - cron:  '0 1 * * *'
       
