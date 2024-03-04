@@ -12,6 +12,11 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - name: Install libcurl
+        run: >
+          sudo apt-get update && sudo apt-get install --yes
+          libcurl4-openssl-dev
+          
       - name: Checkout repo
         uses: actions/checkout@v4
         with:
