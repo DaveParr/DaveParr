@@ -5,12 +5,9 @@ I have a blog at [DaveParr.info](DaveParr.info)
 
 ## Popular Repos
 
-<figure>
-<img src="https://github.com/daveparr/daveparr/blob/main/graph.png"
-alt="A plot of David Parrs popular github repos" />
-<figcaption aria-hidden="true">A plot of David Parrs popular github
-repos</figcaption>
-</figure>
+![A plot of David Parrs popular github
+repos](https://github.com/daveparr/daveparr/blob/main/graph.png)
+\#FIXME: Workflow doesn’t properly update graph.
 
 ## About
 
