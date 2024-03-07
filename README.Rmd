@@ -4,7 +4,7 @@ output: github_document
 
 ## DaveParr.Info
 
-I have a blog at [DaveParr.info](DaveParr.info)
+I have a blog at [DaveParr.info](DaveParr.info).
 
 ## Popular Repos
 
@@ -53,6 +53,10 @@ repos_to_plot %>%
     fill = "Metric"
   ) +
   ggplot2::theme_minimal()
+```
+
+```{r}
+repos_to_plot
 ```
 
 ## Popular Blogs
