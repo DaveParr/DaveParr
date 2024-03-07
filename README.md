@@ -1,8 +1,4 @@
 
-## DaveParr.Info
-
-I have a blog at [DaveParr.info](DaveParr.info).
-
 ## Popular Repos
 
 ``` r
@@ -50,7 +46,7 @@ repos_to_plot <- repos %>%
   ) %>%
   dplyr::arrange(desc(count))
 
-repos_to_plot %>%
+plot <- repos_to_plot %>%
   ggplot2::ggplot(aes(
     x = forcats::fct_reorder(repo_name, count, .desc = TRUE),
     y = count,
@@ -64,30 +60,22 @@ repos_to_plot %>%
     fill = "Metric"
   ) +
   ggplot2::theme_minimal()
+
+ggplot2::ggsave("graph.png")
 ```
 
-![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+    ## Saving 7 x 5 in image
 
-``` r
-repos_to_plot
-```
+![](graph.png)
 
-    ## # A tibble: 22 × 5
-    ##    repo_name            fork  repos             metric           count
-    ##    <chr>                <lgl> <list>            <chr>            <int>
-    ##  1 starpilot            FALSE <named list [76]> stargazers_count    23
-    ##  2 awesome-climate-data FALSE <named list [76]> stargazers_count    22
-    ##  3 snake-cat-hack       FALSE <named list [76]> forks_count         13
-    ##  4 pokedex              FALSE <named list [76]> stargazers_count     6
-    ##  5 snakes_and_lambdas   FALSE <named list [76]> stargazers_count     5
-    ##  6 awesome-climate-data FALSE <named list [76]> forks_count          4
-    ##  7 starpilot            FALSE <named list [76]> forks_count          3
-    ##  8 ScrapeGenius         FALSE <named list [76]> forks_count          3
-    ##  9 snakes_and_lambdas   FALSE <named list [76]> forks_count          1
-    ## 10 DaveParr             FALSE <named list [76]> stargazers_count     1
-    ## # … with 12 more rows
+## DaveParr.Info
+
+I have a blog at [DaveParr.info](DaveParr.info).
 
 ## Popular Blogs
+
+The blog is reyndicated at [Dev.to](https://dev.to/daveparr). Here are
+the most popular articles.
 
 ``` r
 library(dev.to.ol)
