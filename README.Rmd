@@ -39,7 +39,7 @@ repos_to_plot <- repos %>%
   ) %>%
   dplyr::arrange(desc(count))
 
-repos_to_plot %>%
+plot <- repos_to_plot %>%
   ggplot2::ggplot(aes(
     x = forcats::fct_reorder(repo_name, count, .desc = TRUE),
     y = count,
@@ -56,7 +56,7 @@ repos_to_plot %>%
 ```
 
 ```{r}
-repos_to_plot
+plot
 ```
 
 ## Popular Blogs
