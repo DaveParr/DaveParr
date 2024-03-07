@@ -1,7 +1,7 @@
 
 ## DaveParr.Info
 
-I have a blog at [DaveParr.info](DaveParr.info)
+I have a blog at [DaveParr.info](DaveParr.info).
 
 ## Popular Repos
 
@@ -67,6 +67,25 @@ repos_to_plot %>%
 ```
 
 ![](README_files/figure-gfm/unnamed-chunk-1-1.png)<!-- -->
+
+``` r
+repos_to_plot
+```
+
+    ## # A tibble: 22 × 5
+    ##    repo_name            fork  repos             metric           count
+    ##    <chr>                <lgl> <list>            <chr>            <int>
+    ##  1 starpilot            FALSE <named list [76]> stargazers_count    23
+    ##  2 awesome-climate-data FALSE <named list [76]> stargazers_count    22
+    ##  3 snake-cat-hack       FALSE <named list [76]> forks_count         13
+    ##  4 pokedex              FALSE <named list [76]> stargazers_count     6
+    ##  5 snakes_and_lambdas   FALSE <named list [76]> stargazers_count     5
+    ##  6 awesome-climate-data FALSE <named list [76]> forks_count          4
+    ##  7 starpilot            FALSE <named list [76]> forks_count          3
+    ##  8 ScrapeGenius         FALSE <named list [76]> forks_count          3
+    ##  9 snakes_and_lambdas   FALSE <named list [76]> forks_count          1
+    ## 10 DaveParr             FALSE <named list [76]> stargazers_count     1
+    ## # … with 12 more rows
 
 ## Popular Blogs
 
