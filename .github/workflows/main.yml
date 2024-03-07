@@ -30,18 +30,6 @@ jobs:
 
       - uses: r-lib/actions/setup-renv@v2
 
-      - name: Run repos
-        run: |-
-          Rscript -e "source('repos.R')"
-          
-      - name: Commit updated graph
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git add graph.png
-          git commit -m "Update the graph" -a || echo "No changes to commit"
-          git push https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git HEAD:${{ github.ref }} || echo "No changes to commit"
-
       - name: Render Rmarkdown files and Commit Results
         run: |
           RMD_PATH=($(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '[.]Rmd$'))
