@@ -4,7 +4,7 @@ output: github_document
 
 ## Popular Repos
 
-```{r}
+```{r popular_repos, echo = FALSE, message = FALSE}
 library(gh)
 library(tibble)
 library(tidyr)
@@ -63,7 +63,7 @@ I have a blog at [DaveParr.info](DaveParr.info).
 
 The blog is reyndicated at [Dev.to](https://dev.to/daveparr). Here are the most popular articles.
 
-```{r}
+```{r Popular_articles, echo = FALSE, message = FALSE}
 library(dev.to.ol)
 library(dplyr)
 library(knitr)

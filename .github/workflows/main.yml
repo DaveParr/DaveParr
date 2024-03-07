@@ -3,6 +3,8 @@
 on:
   push:
     paths: ['**.Rmd']
+  scehdule:
+    - cron: '25 16 * * *'
 
 name: render-rmarkdown
 
