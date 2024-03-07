@@ -53,11 +53,11 @@ plot <- repos_to_plot %>%
     fill = "Metric"
   ) +
   ggplot2::theme_minimal()
+
+ggplot2::ggsave("graph.png")
 ```
 
-```{r}
-plot
-```
+![](graph.png)
 
 ## Popular Blogs
 
