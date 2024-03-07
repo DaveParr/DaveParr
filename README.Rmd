@@ -53,7 +53,7 @@ repos_to_plot %>%
     fill = "Metric"
   ) +
   ggplot2::theme_minimal()
-  ```
+```
 
 ## Popular Blogs
 
