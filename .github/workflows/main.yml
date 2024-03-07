@@ -41,5 +41,8 @@ jobs:
           git add README.md
           # add files in README_files directory
           git add graph.png
+          git status
           git commit -m "Update the README" -a || echo "No changes to commit"
+          git status
+          git push origin || echo "No changes to commit"
           

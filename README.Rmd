@@ -2,10 +2,6 @@
 output: github_document
 ---
 
-## DaveParr.Info
-
-I have a blog at [DaveParr.info](DaveParr.info).
-
 ## Popular Repos
 
 ```{r}
@@ -59,7 +55,13 @@ ggplot2::ggsave("graph.png")
 
 ![](graph.png)
 
+## DaveParr.Info
+
+I have a blog at [DaveParr.info](DaveParr.info).
+
 ## Popular Blogs
+
+The blog is reyndicated at [Dev.to](https://dev.to/daveparr). Here are the most popular articles.
 
 ```{r}
 library(dev.to.ol)
