@@ -22,7 +22,7 @@ This uses my package [dev.to.ol](https://github.com/DaveParr/dev.to.ol)
 | [Why use AWS Lambda for Data Science?](https://dev.to/daveparr/why-use-aws-lambda-for-data-science-421)                                                                                       |                     32 |              3 |             1253 |
 | [Posting straight from .Rmd to dev.to (for real this time)](https://dev.to/daveparr/posting-straight-from-rmd-to-dev-to-1j4p)                                                                 |                     15 |              0 |              210 |
 | [Writing R packages, fast](https://dev.to/daveparr/writing-r-packages-fast-474c)                                                                                                              |                     12 |              0 |               79 |
-| [My GitHub profile shows my popular dev.to posts and GitHub repos automatically](https://dev.to/daveparr/my-github-profile-shows-my-popular-dev-to-posts-and-github-repos-automatically-2n05) |                      9 |              0 |              191 |
+| [My GitHub profile shows my popular dev.to posts and GitHub repos automatically](https://dev.to/daveparr/my-github-profile-shows-my-popular-dev-to-posts-and-github-repos-automatically-2n05) |                      9 |              0 |              193 |
 
 ## About
 
